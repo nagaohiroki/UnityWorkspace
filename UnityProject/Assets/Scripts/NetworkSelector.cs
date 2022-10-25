@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using Unity.Netcode;
 public class NetworkSelector : MonoBehaviour
 {
@@ -18,5 +18,10 @@ public class NetworkSelector : MonoBehaviour
 	{
 		mManager.StartServer();
 		Debug.Log("StartServer");
+	}
+	public void Logout()
+	{
+		mManager.Shutdown();
+		Debug.Log("Logout");
 	}
 }
