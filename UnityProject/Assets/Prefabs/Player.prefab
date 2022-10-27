@@ -154,4 +154,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03118749133d4b34b8b3045f7d8eaad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mInput: {fileID: 0}
+  mController: {fileID: 0}
