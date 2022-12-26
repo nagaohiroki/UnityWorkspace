@@ -24,4 +24,13 @@ public class NetworkSelector : MonoBehaviour
 		mManager.Shutdown();
 		Debug.Log("Logout");
 	}
+#if UNITY_SERVER
+	void Awake()
+	{
+		if(mManager.IsServer)
+		{
+			StartServer();
+		}
+	}
+#endif
 }
