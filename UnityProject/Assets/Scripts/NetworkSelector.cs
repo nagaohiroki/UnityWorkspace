@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Unity.Netcode;
+using Unity.Netcode.Transports.UTP;
 public class NetworkSelector : MonoBehaviour
 {
 	[SerializeField]
@@ -24,13 +25,17 @@ public class NetworkSelector : MonoBehaviour
 		mManager.Shutdown();
 		Debug.Log("Logout");
 	}
-#if UNITY_SERVER
+	void StartServerMode()
+	{
+		mManager.TryGetComponent<UnityTransport>(out var transport);
+		transport.ConnectionData.Address = "0.0.0.0";
+		transport.ConnectionData.Port = 7777;
+		StartServer();
+	}
 	void Awake()
 	{
-		if(mManager.IsServer)
-		{
-			StartServer();
-		}
-	}
+#if UNITY_SERVER
+		StartServerMode();
 #endif
+	}
 }
