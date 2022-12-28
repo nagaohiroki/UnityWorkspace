@@ -7,6 +7,13 @@
       "dependencies": {},
       "hash": "04b767410bb87f33621a47c85c020e09140f2a2e"
     },
+    "com.nagaohiroki.unityutility": {
+      "version": "https://github.com/nagaohiroki/UnityUtility.git?path=UnityProject/Assets",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "96a1e89dd6f8251acd6dc80a0b1dfc8a32fd81d2"
+    },
     "com.unity.addressables": {
       "version": "1.19.19",
       "depth": 1,
@@ -78,7 +85,7 @@
       }
     },
     "com.unity.ide.rider": {
-      "version": "3.0.16",
+      "version": "3.0.17",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -87,7 +94,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
-      "version": "2.0.16",
+      "version": "2.0.17",
       "depth": 0,
       "source": "registry",
       "dependencies": {
